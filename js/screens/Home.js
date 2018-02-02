@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TouchableOpacity
 } from 'react-native';
+import MapView from 'react-native-maps';
 
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
@@ -22,12 +23,15 @@ const styles = StyleSheet.create({
 class Home extends React.Component {
   render() {
     return (
-      <TouchableOpacity
+      <MapView
         style={styles.container}
-        onPress={() => this.props.test()}
-      >
-        <Text>aaaaa</Text>
-      </TouchableOpacity>
+        initialRegion={{
+          latitude: 37.78825,
+          longitude: -122.4324,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
+      />
     );
   }
 }

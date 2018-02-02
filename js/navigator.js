@@ -12,6 +12,7 @@ const MainNavigator = StackNavigator({
 }, {
   navigationOptions: {
     headerBackTitle: null,
+    header: null,
   }
 });
 
